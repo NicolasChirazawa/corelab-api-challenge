@@ -20,4 +20,11 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
+Route.post('/lists', "ListsController.create");
+Route.get('/lists', "ListsController.getAll");
+Route.get('/lists/:id', "ListsController.getById");
+Route.put('/lists/:id', "ListsController.update");
+Route.delete('/lists/:id', "ListsController.delete");
+Route.get('/search/:title', 'ListsController.searchByTitle');
+
 Route.get('/vehicles', 'VehiclesController.index');
