@@ -1,13 +1,12 @@
 import type { HttpContextContract } from "@ioc:Adonis/Core/HttpContext"
 import List from "App/Models/List";
 
-
-
 export default class ListsController {
     public async create({ request, response }: HttpContextContract) {
         const { title, description, is_favorite } = request.only(["title", "description", "is_favorite"]);
 
         try{
+
             const list = await List.create({
                 title,
                 description,
@@ -36,7 +35,7 @@ export default class ListsController {
     
     public async searchByTitle({ request, response }: HttpContextContract) {
         
-        const title1 = request.param('title')+``;
+        const title1 = request.param('title');
 
         try {
             const title = await List.query().where('title', 'LIKE', `%${title1}%`);

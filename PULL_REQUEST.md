@@ -1,0 +1,3 @@
+Foi adotado o 'sqlite' como banco de dados desta API pela facilidade de seu uso . É possível usar a biblioteca SQLite acessando ao banco de dados SQL sem a necessidade de executar um SGBD separado.
+Uma de suas vantagens é a não necessidade de uma instação, configuração ou administração, além disso funciona em dispositivos diversos justamente pela característica anterior.
+Também vale comentar que é um banco de dados de código aberto e gratuito.
